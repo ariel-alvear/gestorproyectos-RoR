@@ -1,2 +1,15 @@
-<h1>acá se deben ver los proyectos</h1>
-<p>y se deben poder filtrar</p>
+<h1>Listado de proyectos</h1>
+
+<div class="card-columns">
+   <% @project.each do |project| %>
+        <div class="card">
+            <h3 class="card-title text-center"><%= project.title %></h3>
+            <div class="card-body">
+                <p class="card-text"><%= project.description %></p>
+                <h6 class="card-subtitle mb-2 text-muted"><td><%= project.start_date %></td></h6>
+                <h6 class="card-subtitle mb-2 text-muted"><td><%= project.deadline %></td></h6>
+                <h6 class="card-subtitle mb-2 text-muted"><td><%= project.state %></td></h6>
+            </div>
+        </div>
+        <% end %>
+</div>
